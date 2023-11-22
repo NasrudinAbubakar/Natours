@@ -1,0 +1,179 @@
+
+$color-primary :#55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-grey-dark : #777;
+$color-white: #fff;
+$color-black: #000;
+/* 
+Global style
+*/
+/* Animation */
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+    
+  }
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+  
+    }
+    80% {
+      opacity: 0.8;
+      transform: translateX(-10px);    
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0);
+  
+    }
+  }
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(30px)
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+  
+    }
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+  }
+  
+  .btn {
+    text-transform: uppercase;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    &-white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        &::after {
+            background: $color-white;
+          }
+      }
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba($color-black, 0.2);
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+        
+      }
+    &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  
+ 
+  }
+  
+
+  
+  /* 
+  End of Global style
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 30px;
+  }
+
+
+  .header {
+    height: 95vh;
+    background: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg) top/cover no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+
+  }
+  .logo {
+    height: 35px;
+  }
+  .logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  .header-info {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .header-title {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  .main-title {
+    display: block;
+    font-size: 60px;
+    letter-spacing: 35px;
+    font-weight: 400;
+    animation: moveInLeft 1s ease-out;
+    /* animation-delay : 3s; / time before animation starts  
+       animation-iteration-count: 2; / how many times animation will happen
+       animation-timing-functoin: ease-out ease-in ease-in-out; time animation will happen */
+  }
+  .sub-title {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 17px;
+    font-weight: 700;
+    animation: moveInRight 1s ease-out;
+  
+  }
+  
