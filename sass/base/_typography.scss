@@ -1,0 +1,61 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 30px;
+}
+
+.header-title {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+  }
+  .main-title {
+    display: block;
+    font-size: 60px;
+    letter-spacing: 35px;
+    font-weight: 400;
+    animation: moveInLeft 1s ease-out;
+    /* animation-delay : 3s; / time before animation starts  
+       animation-iteration-count: 2; / how many times animation will happen
+       animation-timing-functoin: ease-out ease-in ease-in-out; time animation will happen */
+  }
+  .sub-title {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 17px;
+    font-weight: 700;
+    animation: moveInRight 1s ease-out;
+  
+  }
+
+  .heading-secondry{
+    font-size: 3.5rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(to right , $color-primary-light , $color-primary-dark);
+    color: transparent;
+    -webkit-background-clip: text;
+    letter-spacing: 2px;
+    transition: all .2s;
+    margin: 0 auto;
+    text-align: center;
+
+    &:hover {
+      transform: skewY(2deg) skewX(20deg);
+    }
+  }
+
+  .heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .text {
+    &:not(:last-child){
+      margin-bottom: 3rem;
+    }
+  }
